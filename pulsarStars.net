@@ -1,0 +1,155 @@
+
+net {
+  name = unnamedBN;
+  software = "aGrUM 0.16.4";
+  node_size = (50 50);
+}
+
+node Mean of the integrated profile {
+   states = (1 2 3 4 5 6 7 8 );
+   label = "Mean of the integrated profile";
+   ID = "Mean of the integrated profile";
+}
+
+node Standard deviation of the integrated profile {
+   states = (1 2 3 4 5 6 7 8 9 );
+   label = "Standard deviation of the integrated profile";
+   ID = "Standard deviation of the integrated profile";
+}
+
+node Excess kurtosis of the integrated profile {
+   states = (1 2 3 4 5 6 7 8 9 );
+   label = "Excess kurtosis of the integrated profile";
+   ID = "Excess kurtosis of the integrated profile";
+}
+
+node Skewness of the integrated profile {
+   states = (1 2 3 4 5 6 7 8 9 );
+   label = "Skewness of the integrated profile";
+   ID = "Skewness of the integrated profile";
+}
+
+node Mean of the DM-SNR curve {
+   states = (1 2 3 4 5 6 7 8 9 );
+   label = "Mean of the DM-SNR curve";
+   ID = "Mean of the DM-SNR curve";
+}
+
+node Standard deviation of the DM-SNR curve {
+   states = (1 2 3 4 5 6 7 8 9 );
+   label = "Standard deviation of the DM-SNR curve";
+   ID = "Standard deviation of the DM-SNR curve";
+}
+
+node Excess kurtosis of the DM-SNR curve {
+   states = (1 2 3 4 5 6 7 8 9 );
+   label = "Excess kurtosis of the DM-SNR curve";
+   ID = "Excess kurtosis of the DM-SNR curve";
+}
+
+node Skewness of the DM-SNR curve {
+   states = (1 2 3 4 5 6 7 8 9 );
+   label = "Skewness of the DM-SNR curve";
+   ID = "Skewness of the DM-SNR curve";
+}
+
+node target_class {
+   states = (1 9 );
+   label = "target_class";
+   ID = "target_class";
+}
+
+potential ( Mean of the integrated profile | Excess kurtosis of the integrated profile   ) {
+   data = 
+   ((   0.000159439   0.000159439   0.000159439   0.000159439   0.000159439   0.0231186   0.620057   0.356027)   % Excess kurtosis of the integrated profile=1   
+   (   1.28886e-06   1.28886e-06   9.40867e-05   0.0889944   0.502594   0.375276   0.0329445   9.40867e-05)   % Excess kurtosis of the integrated profile=2   
+   (   9.40911e-06   9.40911e-06   0.10637   0.735049   0.157857   0.000686865   9.40911e-06   9.40911e-06)   % Excess kurtosis of the integrated profile=3   
+   (   0.00288766   0.162381   0.769027   0.0655459   3.9557e-05   3.9557e-05   3.9557e-05   3.9557e-05)   % Excess kurtosis of the integrated profile=4   
+   (   0.139854   0.716553   0.14335   4.85437e-05   4.85437e-05   4.85437e-05   4.85437e-05   4.85437e-05)   % Excess kurtosis of the integrated profile=5   
+   (   0.459628   0.536223   0.00388298   5.31915e-05   5.31915e-05   5.31915e-05   5.31915e-05   5.31915e-05)   % Excess kurtosis of the integrated profile=6   
+   (   0.90482   0.0946174   9.37734e-05   9.37734e-05   9.37734e-05   9.37734e-05   9.37734e-05   9.37734e-05)   % Excess kurtosis of the integrated profile=7   
+   (   0.997449   0.000364431   0.000364431   0.000364431   0.000364431   0.000364431   0.000364431   0.000364431)   % Excess kurtosis of the integrated profile=8   
+   (   0.9125   0.0125   0.0125   0.0125   0.0125   0.0125   0.0125   0.0125));   % Excess kurtosis of the integrated profile=9   
+}
+
+potential ( Standard deviation of the integrated profile | Mean of the integrated profile   ) {
+   data = 
+   ((   0.643513   0.284366   0.0688781   0.00303446   4.15679e-05   4.15679e-05   4.15679e-05   4.15679e-05   4.15679e-05)   % Mean of the integrated profile=1   
+   (   0.509496   0.374921   0.0793365   0.0264677   0.00964587   3.33767e-05   3.33767e-05   3.33767e-05   3.33767e-05)   % Mean of the integrated profile=2   
+   (   0.199976   0.591362   0.144672   0.031936   0.0191734   0.0127921   2.9543e-05   2.9543e-05   2.9543e-05)   % Mean of the integrated profile=3   
+   (   0.0372565   0.588747   0.32945   0.0358052   0.00484436   0.00242554   0.00145801   6.71894e-06   6.71894e-06)   % Mean of the integrated profile=4   
+   (   0.00814531   0.212425   0.605937   0.163037   0.00602109   0.00301177   0.00106457   0.000179477   0.000179477)   % Mean of the integrated profile=5   
+   (   0.000250521   0.0948856   0.637246   0.250799   0.0118637   0.00321559   0.000991788   0.000744699   3.43179e-06)   % Mean of the integrated profile=6   
+   (   3.39478e-05   0.171131   0.567098   0.244458   0.0171436   3.39478e-05   3.39478e-05   3.39478e-05   3.39478e-05)   % Mean of the integrated profile=7   
+   (   0.000432339   0.0938176   0.311716   0.529615   0.0626891   0.000432339   0.000432339   0.000432339   0.000432339));   % Mean of the integrated profile=8   
+}
+
+potential ( Excess kurtosis of the integrated profile | target_class   ) {
+   data = 
+   ((   0.00731898   0.89462   0.0960995   0.0014339   0.000340961   0.000172816   4.67069e-06   4.67069e-06   4.67069e-06)   % target_class=1   
+   (   3.6299e-05   0.0882428   0.217612   0.218266   0.18429   0.169262   0.0967367   0.0248648   0.00068968));   % target_class=9   
+}
+
+potential ( Skewness of the integrated profile | Excess kurtosis of the integrated profile   ) {
+   data = 
+   ((   0.998866   0.000141723   0.000141723   0.000141723   0.000141723   0.000141723   0.000141723   0.000141723   0.000141723)   % Excess kurtosis of the integrated profile=1   
+   (   0.999991   1.14565e-06   1.14565e-06   1.14565e-06   1.14565e-06   1.14565e-06   1.14565e-06   1.14565e-06   1.14565e-06)   % Excess kurtosis of the integrated profile=2   
+   (   0.996546   0.00339564   8.36365e-06   8.36365e-06   8.36365e-06   8.36365e-06   8.36365e-06   8.36365e-06   8.36365e-06)   % Excess kurtosis of the integrated profile=3   
+   (   0.29339   0.694972   0.0114276   3.51617e-05   3.51617e-05   3.51617e-05   3.51617e-05   3.51617e-05   3.51617e-05)   % Excess kurtosis of the integrated profile=4   
+   (   4.31499e-05   0.426451   0.531305   0.0419849   4.31499e-05   4.31499e-05   4.31499e-05   4.31499e-05   4.31499e-05)   % Excess kurtosis of the integrated profile=5   
+   (   4.72813e-05   4.72813e-05   0.237494   0.67409   0.0881324   4.72813e-05   4.72813e-05   4.72813e-05   4.72813e-05)   % Excess kurtosis of the integrated profile=6   
+   (   8.33542e-05   8.33542e-05   8.33542e-05   0.0540969   0.702259   0.236392   0.00683504   8.33542e-05   8.33542e-05)   % Excess kurtosis of the integrated profile=7   
+   (   0.000323939   0.000323939   0.000323939   0.000323939   0.000323939   0.183997   0.708779   0.10528   0.000323939)   % Excess kurtosis of the integrated profile=8   
+   (   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111   0.911111));   % Excess kurtosis of the integrated profile=9   
+}
+
+potential ( Mean of the DM-SNR curve | Excess kurtosis of the DM-SNR curve   ) {
+   data = 
+   ((   0.00159065   0.157308   0.259276   0.226077   0.180231   0.0948631   0.0656166   0.0142378   0.000800203)   % Excess kurtosis of the DM-SNR curve=1   
+   (   0.901157   0.0977659   0.000702607   0.000353459   4.31047e-06   4.31047e-06   4.31047e-06   4.31047e-06   4.31047e-06)   % Excess kurtosis of the DM-SNR curve=2   
+   (   0.999985   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06)   % Excess kurtosis of the DM-SNR curve=3   
+   (   0.999955   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06)   % Excess kurtosis of the DM-SNR curve=4   
+   (   0.999789   2.63172e-05   2.63172e-05   2.63172e-05   2.63172e-05   2.63172e-05   2.63172e-05   2.63172e-05   2.63172e-05)   % Excess kurtosis of the DM-SNR curve=5   
+   (   0.999086   0.000114194   0.000114194   0.000114194   0.000114194   0.000114194   0.000114194   0.000114194   0.000114194)   % Excess kurtosis of the DM-SNR curve=6   
+   (   0.99672   0.000410004   0.000410004   0.000410004   0.000410004   0.000410004   0.000410004   0.000410004   0.000410004)   % Excess kurtosis of the DM-SNR curve=7   
+   (   0.983838   0.0020202   0.0020202   0.0020202   0.0020202   0.0020202   0.0020202   0.0020202   0.0020202)   % Excess kurtosis of the DM-SNR curve=8   
+   (   0.975976   0.003003   0.003003   0.003003   0.003003   0.003003   0.003003   0.003003   0.003003));   % Excess kurtosis of the DM-SNR curve=9   
+}
+
+potential ( Standard deviation of the DM-SNR curve | target_class   ) {
+   data = 
+   ((   0.61407   0.239527   0.0586873   0.0273282   0.0200139   0.0210228   0.0165669   0.00269499   8.87432e-05)   % target_class=1   
+   (   0.0555737   0.0980435   0.1379   0.214345   0.286217   0.169262   0.0333587   0.00526335   3.6299e-05));   % target_class=9   
+}
+
+potential ( Excess kurtosis of the DM-SNR curve | Standard deviation of the DM-SNR curve   ) {
+   data = 
+   ((   0.000137005   0.00270836   0.617803   0.295842   0.0634734   0.0146178   0.0040617   0.000813676   0.000543008)   % Standard deviation of the DM-SNR curve=1   
+   (   0.00167128   0.356776   0.641528   4.11645e-06   4.11645e-06   4.11645e-06   4.11645e-06   4.11645e-06   4.11645e-06)   % Standard deviation of the DM-SNR curve=2   
+   (   0.025313   0.971292   0.00331351   1.35799e-05   1.35799e-05   1.35799e-05   1.35799e-05   1.35799e-05   1.35799e-05)   % Standard deviation of the DM-SNR curve=3   
+   (   0.160788   0.83908   1.89029e-05   1.89029e-05   1.89029e-05   1.89029e-05   1.89029e-05   1.89029e-05   1.89029e-05)   % Standard deviation of the DM-SNR curve=4   
+   (   0.542828   0.457044   1.82598e-05   1.82598e-05   1.82598e-05   1.82598e-05   1.82598e-05   1.82598e-05   1.82598e-05)   % Standard deviation of the DM-SNR curve=5   
+   (   0.933023   0.0668073   2.42495e-05   2.42495e-05   2.42495e-05   2.42495e-05   2.42495e-05   2.42495e-05   2.42495e-05)   % Standard deviation of the DM-SNR curve=6   
+   (   0.999602   4.97587e-05   4.97587e-05   4.97587e-05   4.97587e-05   4.97587e-05   4.97587e-05   4.97587e-05   4.97587e-05)   % Standard deviation of the DM-SNR curve=7   
+   (   0.997538   0.000307787   0.000307787   0.000307787   0.000307787   0.000307787   0.000307787   0.000307787   0.000307787)   % Standard deviation of the DM-SNR curve=8   
+   (   0.911111   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111   0.0111111));   % Standard deviation of the DM-SNR curve=9   
+}
+
+potential ( Skewness of the DM-SNR curve | Excess kurtosis of the DM-SNR curve   ) {
+   data = 
+   ((   0.999922   9.75857e-06   9.75857e-06   9.75857e-06   9.75857e-06   9.75857e-06   9.75857e-06   9.75857e-06   9.75857e-06)   % Excess kurtosis of the DM-SNR curve=1   
+   (   0.999966   4.31047e-06   4.31047e-06   4.31047e-06   4.31047e-06   4.31047e-06   4.31047e-06   4.31047e-06   4.31047e-06)   % Excess kurtosis of the DM-SNR curve=2   
+   (   0.964249   0.0357376   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06   1.90164e-06)   % Excess kurtosis of the DM-SNR curve=3   
+   (   0.0983538   0.878278   0.0233347   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06   5.64732e-06)   % Excess kurtosis of the DM-SNR curve=4   
+   (   2.63172e-05   0.149245   0.754645   0.0959524   2.63172e-05   2.63172e-05   2.63172e-05   2.63172e-05   2.63172e-05)   % Excess kurtosis of the DM-SNR curve=5   
+   (   0.000114194   0.000114194   0.0186137   0.740094   0.240608   0.000114194   0.000114194   0.000114194   0.000114194)   % Excess kurtosis of the DM-SNR curve=6   
+   (   0.000410004   0.000410004   0.000410004   0.000410004   0.299303   0.598196   0.100041   0.000410004   0.000410004)   % Excess kurtosis of the DM-SNR curve=7   
+   (   0.0020202   0.0020202   0.0020202   0.0020202   0.0020202   0.0020202   0.656566   0.329293   0.0020202)   % Excess kurtosis of the DM-SNR curve=8   
+   (   0.003003   0.003003   0.003003   0.003003   0.003003   0.003003   0.003003   0.003003   0.975976));   % Excess kurtosis of the DM-SNR curve=9   
+}
+
+potential (target_class) {
+   data = (  0.885996 0.114004);
+}
+
+
